@@ -34,7 +34,7 @@ public class SolveMaze {
          * Feel free to adjust this number if you experiment with other mazes.
          */
         for (int step = 0; step < 1000; step++) {
-            maze.turnRight();
+           /* maze.turnRight();
             if (maze.canMove()) {
                 maze.move();
             } else {
@@ -49,6 +49,16 @@ public class SolveMaze {
                         maze.turnLeft();
                         maze.move();
                     }
+                }
+            }*/
+            int rand = (int) (Math.random() * 2);
+            if (maze.canMove()) {
+                maze.move();
+            } else {
+                if (rand == 0) {
+                    maze.turnLeft();
+                } else {
+                    maze.turnRight();
                 }
             }
             if (maze.isFinished()) {
