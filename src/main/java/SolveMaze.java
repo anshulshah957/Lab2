@@ -52,6 +52,7 @@ public class SolveMaze {
                 }
             }
             if (maze.isFinished()) {
+                System.out.println(step);
                 break;
             }
 
